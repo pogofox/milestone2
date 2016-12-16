@@ -61,6 +61,7 @@ app.post('/quiz', function(req, res){
 
 app.get('/highScores', function(req, res){
   var users;
+  var users2;
   connection.query('SELECT * FROM users', function (err, rows, fields) {
     if (err) throw err
     console.log(rows[1].name);

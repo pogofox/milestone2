@@ -1,0 +1,27 @@
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+    background-color: #5ffc77;
+    font-family: 'Dekko', cursive;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.button-container form,
+.button-container form div {
+    display: table;
+    margin: auto;
+}
+
+.button-container button {
+    display: table;
+    vertical-align: middle;
+}

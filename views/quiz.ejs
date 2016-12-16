@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="/css/styles.css"> </head>
+    <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>Quiz of Spies</title>
+    <h2 style="text-align: center;">Quiz of Spies</h2>
+
+    <script>
+
+    </script>
+    </head>
+  <body>
+    <div class="container">
+          <h1>May the odds be ever in your favor.</h1>
+          <div id="quiz-result">
+              <table style="width:1000px">
+                  <tr>
+                      <td>
+                          <div>
+                            <form method="post">
+                              <p class="question">Which actor played the main character in the new movie, "Bridge of Spies"?</p>
+                              <ul>
+                                  <input class="answer" type="radio" name="q1" value="0">
+                                  <label>Channing Tatum</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q1" value="1">
+                                  <label id="correctString1">Tom Hanks</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q1" value="0">
+                                  <label>Jim Carey</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q1" value="0">
+                                  <label>Jenna-Louise Coleman</label>
+                              </ul>
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              <p class="question">Which actor plays the father in the "Spy Kids" movie series?</p>
+                              <ul>
+                                  <input class="answer" type="radio" name="q2" value="0">
+                                  <label>Shia Labeouf</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q2" value="0">
+                                  <label>Carmen San Diego</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q2" value="0">
+                                  <label>Michael Carbonaro</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q2" value="1">
+                                  <label id="correctString2">Antonio Banderas</label>
+                              </ul>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <div>
+                              <p class="question">What is the name of Agent 007?</p>
+                              <ul>
+                                  <input class="answer" type="radio" name="q3" value="0">
+                                  <label>Nathan Hale</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q3" value="1">
+                                  <label id="correctString3">James Bond</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q3" value="0">
+                                  <label>Ethan Hunt</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q3" value="0">
+                                  <label>Jason Bourne</label>
+                              </ul>
+                          </div>
+                      </td>
+                      <td>
+                          <div>
+                              <p class="question">According to the Moscow Rules, what is the first rule of spying?</p>
+                              <ul>
+                                  <input class="answer" type="radio" name="q4" value="0">
+                                  <label>Never get found out.</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q4" value="0">
+                                  <label>Float like a butterfly, sting like a bee.</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q4" value="1">
+                                  <label id="correctString4">Assume nothing.</label>
+                                  <br>
+                                  <input class="answer" type="radio" name="q4" value="0">
+                                  <label>Never reveal your true identity.</label>
+                              </ul>
+                          </div>
+                      </td>
+                  </tr>
+              </table>
+              <br/>
+              <input type="text" style="display: none;" name="name" value="<%= name %>">
+              <div class="submitter">
+                  <input type="submit" value="Submit Answers"></input>
+              </div>
+            </form>
+          </div>
+        </div>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 var express = require('express');
-var mysql = require('mysql')
+var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
 var app = express();
@@ -14,25 +14,24 @@ var connection = mysql.createConnection({
   user: 'pogofox',
   password: 'pogofox725',
   database: 'milestone_2'
-})
+});
 
 var name;
 
 connection.connect(function(err) {
-  if (err) throw err
-  console.log('You are now connected...')
-})
+  if (err) throw err;
+  console.log('You are now connected...');
+});
 
 connection.query('SELECT * FROM users', function (err, rows, fields) {
-  if (err) throw err
-  //console.log('blogs', {blogs: rows});
-})
+  if (err) throw err;
+});
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 app.get('/quiz', function(req, res){
-  res.render('quiz', {name: name})
+  res.render('quiz', {name: name});
 });
 
 app.post('/quiz', function(req, res){
@@ -55,22 +54,22 @@ app.post('/quiz', function(req, res){
     score : sum
   };
   var query = connection.query("INSERT INTO users set ?", data , function(err, rows) {
-    res.redirect('/highScores')
+    res.redirect('/highScores');
   });
-})
+});
 
 app.get('/highScores', function(req, res){
   var users;
   var users2;
   connection.query('SELECT * FROM users', function (err, rows, fields) {
-    if (err) throw err
+    if (err) throw err;
     console.log(rows[1].name);
     users = rows;
     users2 = users.sort(function(a, b) {
       return parseFloat(b.score) - parseFloat(a.score);
     });
     res.render('highScores', {users: users2});
-  })
+  });
 });
 
 app.get('/', function(req, res){
@@ -83,5 +82,5 @@ app.post('/', function(req, res){
 });
 
 app.listen(3000, function(){
-  console.log("The server is running on localhost:3000")
-})
+  console.log("The server is running on localhost:3000");
+});
